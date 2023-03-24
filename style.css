@@ -5,56 +5,97 @@
 }
 
 body {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  background: hsl(233, 47%, 7%);
   margin: 0;
-  font-size: 16px;
-}
-
-/* --- Typography --- */
-h2 {
-  font-size: 1.7em;
-  font-weight: 700;
-  color: hsl(218, 44%, 22%);
-}
-
-p {
-  font-size: 1.2em;
-  color: hsl(220, 15%, 55%);
-  margin-top: 0;
-  line-height: 1.3;
-}
-
-/* --- Layout --- */
-.container {
-  width: 90%;
-  max-width: 1440px;
-  background: hsl(212, 45%, 89%);
-  margin: 8em auto;
-  padding: 6em 2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.content-wraper {
-  max-width: 375px;
-  background: hsl(0, 0%, 100%);
-  border-radius: 25px;
-  padding: 1.2em;
-  display: flex;
-  flex-direction: column;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-.main-image {
-  width: 100%;
-  border-radius: 13px;
+/* Typography */
+h1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 2rem;
 }
+
+span {
+  color: hsl(277, 64%, 61%);
+}
+
+.heading {
+  margin-bottom: 0;
+}
+
+.main-paragraph {
+  font-size: 1.1rem;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.stat-headings {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: hsla(0, 0%, 100%, 0.6);
+  margin: 0;
+  padding-top: 0.4em;
+}
+
+.main-section-one {
+  padding: 2em;
+}
+
+.last-stat-heading {
+  padding-bottom: 3em;
+}
+
+/* Layout */
+header {
+  width: 375px;
+  height: 390px;
+  background-image: url(images/image-header-mobile.jpg);
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+main {
+  background: hsl(244, 38%, 16%);
+  border-radius: 0 0 10px 10px;
+}
+
+.container {
+  width: 375px;
+}
+
+.card-image {
+  width: 100%;
+  display: block;
+  border-radius: 10px 10px 0 0;
+}
+
+.head {
+  width: 100%;
+  height: 100%;
+  background: hsl(277, 64%, 61%);
+  opacity: 0.6;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Footer */
 
 .attribution {
-  font-size: 0.687rem;
+  font-size: 11px;
   text-align: center;
+  position: fixed;
+  bottom: 2em;
+  color: hsla(0, 0%, 100%, 0.75);
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
