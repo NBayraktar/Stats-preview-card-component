@@ -17,10 +17,10 @@ body {
   height: 100vh;
 }
 
-/* Typography */
+/* --- Typography --- */
 h1 {
   color: hsl(0, 0%, 100%);
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 span {
@@ -32,7 +32,7 @@ span {
 }
 
 .main-paragraph {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: hsla(0, 0%, 100%, 0.75);
   line-height: 1.7;
   margin-bottom: 0;
@@ -48,39 +48,37 @@ span {
 }
 
 .main-section-one {
-  padding: 2em;
+  padding: 2em 0;
 }
 
 .last-stat-heading {
   padding-bottom: 3em;
 }
 
-/* Layout */
-header {
-  width: 375px;
-  height: 390px;
-  background-image: url(images/image-header-mobile.jpg);
-  /* background-repeat: no-repeat; */
-  background-size: cover;
-  border-radius: 10px 10px 0 0;
-}
+/* --- Layout --- */
 
 main {
   background: hsl(244, 38%, 16%);
   border-radius: 0 0 10px 10px;
+  padding: 0 2.3em;
 }
 
 .container {
-  width: 375px;
+  min-width: 375px;
+  margin: 0 auto;
+  padding: 0 2.3em;
 }
 
-.card-image {
+.img-mobile {
   width: 100%;
-  display: block;
+  height: 310px;
+  background-image: url(images/image-header-mobile.jpg);
+  background-size: cover;
+  background-position: center;
   border-radius: 10px 10px 0 0;
 }
 
-.head {
+.color-overlay {
   width: 100%;
   height: 100%;
   background: hsl(277, 64%, 61%);
@@ -88,15 +86,61 @@ main {
   border-radius: 10px 10px 0 0;
 }
 
-/* Footer */
+/* --- Footer --- */
 
 .attribution {
   font-size: 11px;
   text-align: center;
   position: fixed;
-  bottom: 2em;
+  bottom: 0;
   color: hsla(0, 0%, 100%, 0.75);
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* --- Media Queries --- */
+@media (min-width: 960px) {
+  .container {
+    max-width: 1440px;
+    min-height: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-areas: 'm h';
+  }
+
+  .img-mobile {
+    width: 100%;
+    height: 100%;
+    background-image: url(images/image-header-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 10px 10px 0;
+    grid-area: h;
+  }
+
+  .color-overlay {
+    border-radius: 0 10px 10px 0;
+  }
+
+  main {
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .main-section-one,
+  .main-section-two {
+    text-align: start;
+    padding-left: 1em;
+  }
+
+  .main-section-two {
+    margin: 3em 4em 0 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+  }
 }
